@@ -25,7 +25,7 @@ def favorite_automated(words, favs):
     api = tweepy.API(auth)
     
     for word in words:
-        word = word+' -bot'+' -相互フォロー'+' -シド神'+' -セックス'+' -オフパコ'+' -美少女'+' -おっぱ'+' exclude:retweets'
+        word = word+' -bot'+' -相互フォロー'+' -シド神'+' exclude:retweets'
         #word = word + '-bot -オフパコ -相互フォロー -セフレ' + ' exclude:retweets' + ' min_faves:100'
         print(word)
         search_results = api.search_tweets(q=word, count=favs)
@@ -40,7 +40,8 @@ def favorite_automated(words, favs):
     
 
 if __name__ == '__main__':
-    words = ['"ロジカルシンキング"', '"科学的思考"', '"科学的手法"', '"サイエンスコミュニケーター"', '"研究者志望"', '"院試"', '"ポスドク"']
-    words = ['"フラーレン"', '"有機化学合成"', '"アーク放電法"', '"アルゴンガス"', '"コランニュレン"', '"ベンゼン環"']
-    favs = 10
+    # words = ['"ロジカルシンキング"', '"科学的思考"', '"科学的手法"', '"サイエンスコミュニケーター"', '"研究者志望"', '"院試"', '"ポスドク"']
+    # words = ['"フラーレン"', '"有機化学合成"', '"アーク放電法"', '"アルゴンガス"', '"コランニュレン"', '"ベンゼン環"']
+    words = ['"ロジカルシンキング"', '"科学的思考"', '"科学的手法"', '"サイエンスコミュニケーター"', '"研究者志望"', '"院試"', '"ポスドク"', '"フラーレン"', '"有機化学合成"', '"アーク放電法"', '"アルゴンガス"', '"コランニュレン"', '"ベンゼン環"']
+    favs = 2
     favorite_automated(words, favs)
