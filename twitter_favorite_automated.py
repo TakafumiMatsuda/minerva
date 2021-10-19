@@ -28,7 +28,7 @@ def favorite_automated(words, favs):
         word = word+' -bot'+' -相互フォロー'+' -シド神'+' exclude:retweets'
         #word = word + '-bot -オフパコ -相互フォロー -セフレ' + ' exclude:retweets' + ' min_faves:100'
         print(word)
-        search_results = api.search_tweets(q=word, count=favs)
+        search_results = api.search(q=word, count=favs)
         for result in search_results:
             tweet_id = result.id #Tweetのidを取得
             user_id = result.user._json['id'] #ユーザーのidを取得
